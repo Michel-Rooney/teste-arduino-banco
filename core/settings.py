@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-x0$(i0byi(q03ho(fq#f1w84g1-l51u)5=ezgo36+$)^$$im_1
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://arduino-banco.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ["*"]
 
 
 # Application definition
