@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-x0$(i0byi(q03ho(fq#f1w84g1-l51u)5=ezgo36+$)^$$im_1
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ["https://arduino-banco.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = ["https://teste-arduino-banco.onrender.com"]
 
 
 # Application definition
@@ -89,12 +89,16 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-} 
+    'default': dj_database_url.parse(config('DATABASE_URL')) 
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
